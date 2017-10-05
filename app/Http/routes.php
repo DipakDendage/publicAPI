@@ -17,5 +17,11 @@ Route::get('/', function () {
 
 //Route::resource('employee', 'EmployeeController');
 
-Route::resource('employee', 'EmployeeController',
-    array('names' => array('create' => 'employee.store')));
+//Route::group(['middleware' => 'cors'], function()
+//{
+    Route::resource('employee', 'EmployeeController',
+        array('names' => array('create' => 'employee.store','index' => 'employee.index', 'edit' => 'employee.edit')));
+    Route::get('getEmployee/{id}', 'EmployeeController@edit');
+//});
+
+

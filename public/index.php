@@ -1,4 +1,7 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header( 'Access-Control-Allow-Headers: Authorization, Content-Type' );
+header('Access-Control-Allow-Methods: GET,POST,PUT,DELETE,OPTIONS');
 
 /**
  * Laravel - A PHP Framework For Web Artisans
